@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;500;700;900&display=swap');
+*,
+*:before,
+*:after{
+    margin: none;
+    padding: none;
+    scroll-behavior: smooth;
+}
+
+body{
+    height: 100vh;;
+    max-height: 80vh;
+    height: 100%;
+    max-width: 100%;
+}
+
+.container{
+    width: 100%;
+    /* min-width: 400px; */
+    /* padding: 25px 20px; */
+    position: absolute;
+    align-items: center;
+    /* transform: translate(-50%, -50%); */
+    top: -3%;
+}
+.div-container{
+    position: absolute;
+}
+
+.ellipse{
+    transform: rotate(-20deg);
+    position: absolute;
+    height: 88vh;
+    top: -25px;
+    left: -450px;
+    width: 1000px;
+}
+
+
+.img{
+    position: absolute;
+    top: 300px;
+    left: -130px;
+}
+
+/* .text-box{
+    width: 50%;
+    color: #464444;
+    position: absolute;
+    top: 30%;
+    left: 47%;
+    text-align: center;
+} */
+
+.div{
+    text-align: center;
+    font-size: 70px;
+    font-weight: 700;
+    top: 30px;
+    position: relative;
+    align-items: center;
+}
+
+.p{
+  
+    position: relative;
+    color: #000000;
+    font-size: 35px;
+    font-weight: 300;
+    text-align: center;
+}
+
+form{
+    justify-content: center;
+}
+
+
+input{
+    justify-content: center;
+    /* display: block */
+    width: 500px;
+    height: 50px;
+    border: none;
+    border-radius: 12px;
+    background-color: #F3F3F3;
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
+    flex-direction: column;
+    padding: 12px 20px;
+}
+
+
+.username{
+    margin-top: 50px;
+    position: absolute;
+}
+
+.password{
+    margin-top: 170px;
+}
+
+.forgot-password{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.forgot-password span{
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 19px;
+    color: #2D2626;
+}
+
+.forgot-password span:hover{
+    color: #042100;
+    cursor: pointer;
+}
+.div-button{
+    margin-top: 70px;
+    text-align: center;
+    justify-content: center;
+}
+
+.div-button button{
+    width: 630px;
+    height: 60px;
+    border: none;
+    border-radius: 20px;
+    background-color: #042100;
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.or-signin-with img{
+    text-align: center;
+    align-items: center;
+    /* margin-left: auto; */
+}
+
+.img-rec{
+    /* margin-left: 300px; */
+    text-align: right;
+    position: absolute;
+}
+
+
+.or-signin-with p{
+    margin-top: 30px;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.links{
+   text-align: center;
+   align-items: center;
+   justify-content: center;
+}
+
+.google{
+    /* position: absolute; */
+    top: 520px;
+    left: -25px;
+    height: 70px;
+}
+
+.google-img{
+    position: absolute;
+    top:780px;
+    margin-left: -58px;
+    height: 40px;
+}
+
+.facebook{
+    /* position: absolute; */
+    top: 520px;
+    left: 130px;
+    height: 70px;
+}
+
+
+.facebook-img{
+    position: absolute;
+    top:780px;
+    margin-left: -58px;
+    height: 40px;
+}
+
+.apple{
+    /* position: absolute; */
+    top: 520px;
+    left: 290px;
+    height: 70px;
+}
+
+.apple-img{
+    position: absolute;
+    top:780px;
+    margin-left: -58px;
+    height: 40px;
+}
+
+
+.have-an-account p{
+    top: 750px;
+    /* position: absolute; */
+    font-size: 20px;
+    color:  #666161;
+    text-align: center;
+}
+
+
+.have-an-account span{
+    font-size: 21px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.have-an-account span:hover{
+    color: #042100;
+}
+
+
+@media all and (max-width: 600px) {
+    body{
+        background-color: #000000;
+    }
+    .ellipse{
+        display: none;
+        left: -1000px;
+    }
+}
