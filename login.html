@@ -1,62 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;500;700;900&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/6802a7da62.js" crossorigin="anonymous"></script>
-    <title>Fresh Save </title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="login.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;500;700;900&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/6802a7da62.js" crossorigin="anonymous"></script>
+        <title>Login to your account</title>
+    </head>
 
-<body>
-    <div class="container">
-    <div class="div-container">
-        <img src="assets\Group.png" alt="ellipse" class="ellipse">
-    <img src="assets\Component.png" alt="component.png" class="img">
-    <div class="img-container">
-    <img src="assets\frame43.png" class="center">
-    </div>
-   </div>
+    <body>
+        <div class="container">
+            <div class="side-logo">
+                <img src="assets\login-page\side-img.png" alt="Fresh Save" class="side-img">
+            </div>
 
-    <!-- <div class="text-box"> -->
-        <h1 class="div">Welcome Back</h1>
-        <p class="p">you're joining a community of people that shares a <br>common belief about food wastage</p>
+            <div class="content">
+                <h1 class="div">Welcome Back!</h1>
+                <p class="content-p">Welcome to a community of that shares a <br>common belief about food wastage</p>
 
+                <form method="post">
+                    <input type="text/number/email" placeholder="Username, Email or Phone Number" class="username" required>
+                    <input type="password" placeholder="Password" class="password" required>
+                </form>
 
-        <form align="center" method="post">
-            <input type="text/number/email" placeholder="Username, Email or Phone Number" class="username" required>
-            <input type="password" placeholder="Password" class="password" required>
-        </form>
+                <div class="forgot-password">
+                    <span>Forgot password ?</span>
+                </div>
 
-        <div class="forgot-password">
-            <span>Forgot password ?</span>
+                <div class="signin-button">
+                    <button type="submit">Sign in</button>
+                </div>
+
+                <div class="signin-options">
+                    <p>Or Sign in With</p>
+                </div>
+
+                <div class="links">
+                    <a href="#"><img src="assets\login-page\google-img.png" class="google-img"></a>
+                    <a href="#"><img src="assets\login-page\facebook-img.png" class="facebook-img"></a>
+                    <a href="#"><img src="assets\login-page\apple-img.png" class="apple-img"></a>
+                </div>
+
+                <div class="new-signup">
+                    <p>Don't have an account? <span><a href="#">Sign up!</a></span></p>
+                </div>
+            </div>
         </div>
-
-        <div class="div-button">
-            <button type="submit">Sign in</button>
-        </div>
-
-        <div class="or-signin-with">
-            <p>Or Sign in With</p>
-        </div>
-
-        <div class="links">
-            <img src="assets\oval.png" class="google">
-            <img src="assets\Google logo.png" class="google-img">
-            <img src="assets\oval.png" class="facebook">
-            <img src="assets\Facbook.png" class="facebook-img">
-            <img src="assets\oval.png" class="apple">
-            <img src="assets\Vector (7).png" class="apple-img">
-        </div>
-
-        <div class="have-an-account">
-            <p>I don't have an account <span>Sign up</span></p>
-        </div>
-    </div>
-    </div>
-</body>
+    </body>
 </html>
