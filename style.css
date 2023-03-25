@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;400&display=swap');
+
 *{
     padding: none;
     margin: none;
+}
+
+body{
+    overflow-y: scroll;
 }
 
 a {
@@ -117,20 +123,21 @@ nav .burger div {
     display: flex;
 }
 
-.s1-content{
+.s1-container{
     display: block;
     margin-top: 1rem;
     margin-left: 10rem;
 }
 
-.s1-content h1 {
+.s1-container h1 {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 900;
     font-size: 3rem;
+    width: 550px;
 }
 
-.s1-content .content{
-    width: 400px;
+.s1-container .s1-content{
+    width: 500px;
     font-size: 1.2rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 500;
@@ -164,10 +171,11 @@ nav .burger div {
 }
 
 .s1-image .homepage{
-    margin-top: 5rem;
-    margin-left: 300px;
-    height: 520px;
-    width: 275px;
+    height: auto;
+    width: auto;
+    margin-left: 150px;
+    margin-top: -50px;
+    z-index: -1;
 }
 
 .s1-image .s1-logo{
@@ -177,6 +185,54 @@ nav .burger div {
     height: 285px;
     z-index: -1;
 }
+
+.section-2{
+    /* margin-top: 50px; */
+    font-family: 'Outfit', sans-serif;
+}
+
+.section-2 h1{
+    font-weight: bolder;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.section-2 .s2-content{
+    margin-top: 50px;
+    margin-left: 7rem;
+    display: block;
+    width: 600px;
+}
+
+.section-2 .s2-container{
+    display: flex;
+}
+
+.section-2 .s2-container .s2-content li{
+    list-style-type: none;
+    text-align: center;
+    font-size: 2rem;
+    margin-left: -30px;
+    /* text-decoration: ; */
+}
+
+.s2-content p{
+    text-align: left;
+    font-size: 1.4rem;
+    margin-bottom: 50px;
+}
+
+.section-2 img{
+    width: 40px;
+}
+
+.section-2 .s2-image img{
+    width: auto;
+    height: auto;
+    margin-left: 150px;
+    margin-top: 50px;
+}
+
 @media screen and (max-width: 1200px){
 nav .nav-links{
     font-size: 0.78em;

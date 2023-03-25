@@ -19,7 +19,7 @@
             <li><a>Products</a></li>
             <li><a>Contact Us</a></li>
             <li><a href="#" class="signup-button">Sign up</a></li>
-            <li><a href="#" class="login-button">Login</a></li>
+            <li><a href="login.html" class="login-button">Login</a></li>
         </ul>
         <div class="burger">
             <div class="line"></div>
@@ -27,10 +27,11 @@
             <div class="line"></div>
         </div>
     </nav> 
+
     <div class="section-1">
-        <div class="s1-content">
-            <h1>"Save Money <br> and Reduce <br> Food Waste"</h1>
-            <div class="content">
+        <div class="s1-container">
+            <h1>"Save Money and Reduce Food Waste"</h1>
+            <div class="s1-content">
                 Fresh Save is a system designed to help you save money and reduce food waste with products that keep food fresh, 
                 a recipe generator, a free food marketplace, and a barcode scanning feature that provides information about compatibility 
                 and proper storage, all promoting a sustainable and equitable food system.
@@ -42,10 +43,44 @@
         </div> 
         <div class="s1-image">
             <img src="assets/app-images/homepage.png" alt="homepage" class="homepage">
-            <img src="assets/app-images/section-1-logo.png" alt="fresh-save-logo" class="s1-logo">
         </div>
     </div>
+
+    <div class="section-2">
+        <h1>Features</h1>
+        <div class="s2-container">
+            <div class="s2-content">
+                <ul>
+                    <li><b>SCAN FOOD ITEMS</b>  <img src="assets/barcode-scanner.jpg" alt="Barcode Scanner" class="barcode"></li>
+                    <p>Users can scan the barcode on food items and find out important information about it
+                    such as the brand name, expiry date, the date of manufacture, and others. </p>
+
+                    <li><b>FOOD ITEMS INVENTORY</b>  <img src="assets/cart-icon.png" alt="Barcode Scanner" class="cart-icon"></li>
+                    <p>Users can view what food products they have stored or scanned and their use by dates. Fresh save helps users keep 
+                        track of the expiry dates of food items to prevent wastage.
+                    </p>
+
+                    <li><b>FREE FOOD COMMUNITIES</b>  <img src="assets/community-icon.png" alt="Barcode Scanner" class="cart-icon"></li>
+                    <p>Users can give out or receive food items to free food communities. Users also have the option to sell off bulk food items 
+                        close to their expiry dates at a bargain price to reduce food wastage. </p>
+                </ul>
+            </div>
+            <div class="s2-image">
+                <img src="assets/app-images/s2-image.png" alt="app-features">
+            </div>
+        </div>
+        
+    </div>
     
+<script>
+    function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+}
+    function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+    }
+</script>
+
 </body>
 </html>
 
