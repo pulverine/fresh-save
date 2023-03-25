@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/css/home.css" />
+    <title>Fresh Save</title>
+  </head>
+  <body>
+    <nav>
+      <a href="#" class="logo"
+        ><img src="/static/images/fresh-save-logo.png" alt="fresh save logo" />
+        <span>Fresh Save</span>
+      </a>
+      <ul class="nav-links">
+        <li><a>Home</a></li>
+        <li><a>Features</a></li>
+        <li><a>Web App</a></li>
+        <li><a>Products</a></li>
+        <li><a>Contact Us</a></li>
+
+        {% if user.is_authenticated %}
+
+        <li>
+          <a
+            class="login-button"
+            href="javascript:{document.getElementById('logout').submit()} "
+            onclick=""
+            >Logout</a
+          >
+        </li>
+        <form id="logout" method="POST" action="{% url 'logout' %}">
+          {% csrf_token %}
+          <input type="hidden" />
+        </form>
+        {% else %}
+        <li><a href="{% url 'signup' %}" class="signup-button">Sign up</a></li>
+        <li><a href="{% url 'login' %}" class="login-button">Login</a></li>
+
+        {% endif %}
+      </ul>
+      <div class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </nav>
+
+    <div class="section-1">
+      <div class="s1-container">
+        <h1>"Save Money and Reduce Food Waste"</h1>
+        <div class="s1-content">
+          Fresh Save is a system designed to help you save money and reduce food
+          waste with products that keep food fresh, a recipe generator, a free
+          food marketplace, and a barcode scanning feature that provides
+          information about compatibility and proper storage, all promoting a
+          sustainable and equitable food system.
+        </div>
+        <div class="s1-content-buttons">
+          <li><a href="#">Web App</a></li>
+          <li><a href="#">Login</a></li>
+        </div>
+      </div>
+      <div class="s1-image">
+        <img
+          src="/static/images/homepage.png"
+          alt="homepage"
+          class="homepage"
+        />
+      </div>
+    </div>
+
+    <div class="section-2">
+      <h1>Features</h1>
+      <div class="s2-container">
+        <div class="s2-content">
+          <ul>
+            <li>
+              <b>SCAN FOOD ITEMS</b>
+              <img
+                src="/static/images/barcode-scanner.jpg"
+                alt="Barcode Scanner"
+                class="barcode"
+              />
+            </li>
+            <p>
+              Users can scan the barcode on food items and find out important
+              information about it such as the brand name, expiry date, the date
+              of manufacture, and others.
+            </p>
+
+            <li>
+              <b>FOOD ITEMS INVENTORY</b>
+              <img
+                src="/static/images/cart-icon.png"
+                alt="Barcode Scanner"
+                class="cart-icon"
+              />
+            </li>
+            <p>
+              Users can view what food products they have stored or scanned and
+              their use by dates. Fresh save helps users keep track of the
+              expiry dates of food items to prevent wastage.
+            </p>
+
+            <li>
+              <b>FREE FOOD COMMUNITIES</b>
+              <img
+                src="/static/images/community-icon.png"
+                alt="Barcode Scanner"
+                class="cart-icon"
+              />
+            </li>
+            <p>
+              Users can give out or receive food items to free food communities.
+              Users also have the option to sell off bulk food items close to
+              their expiry dates at a bargain price to reduce food wastage.
+            </p>
+          </ul>
+        </div>
+        <div class="s2-image">
+          <img src="/static/images/s2-image.png" alt="app-features" />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+      }
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

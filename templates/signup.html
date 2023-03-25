@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/css/signup.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/6802a7da62.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Sign-up for an account</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="side-logo">
+        <img
+          src="/static/images/side-img.png"
+          alt="Fresh Save"
+          class="side-img"
+        />
+      </div>
+
+      <div class="content">
+        <h1>Join Us!</h1>
+        <p class="content-p">
+          You're about to join a community of people <br />
+          working together to prevent food wastage <br />
+          and promote healthy feeding habits!
+        </p>
+        <h3>
+          {% if error %} {{ error }}
+          <br /><br />
+          {% endif %}
+        </h3>
+        <form method="post" action="{% url 'signup' %}">
+          {% csrf_token %}
+          <input
+            type="text"
+            placeholder="Username"
+            name="username"
+            class="username"
+            required
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            name="email"
+            class="email"
+            required
+          />
+          <br />
+          <input
+            type="password"
+            placeholder="Password"
+            class="password"
+            required
+            name="password"
+          />
+          <input
+            type="tel"
+            placeholder="Phone Number"
+            class="phone-number"
+            required
+            name="phonenumber"
+          />
+          <div class="terms-conditions">
+            <input type="checkbox" id="t-c" name="t_c" value="t-c" required />
+            <label for="t-c"
+              >I accept the
+              <a href="#"><span>Terms and Conditions </span></a> of Fresh
+              Save</label
+            >
+          </div>
+
+          <div class="signin-button">
+            <button type="submit">Sign up</button>
+          </div>
+        </form>
+
+        <div class="signin-options">
+          <p>Or Sign up with</p>
+        </div>
+
+        <div class="links">
+          <a href="#"
+            ><img src="/static/images/google-img.png" class="google-img"
+          /></a>
+          <a href="#"
+            ><img src="/static/images/facebook-img.png" class="facebook-img"
+          /></a>
+          <a href="#"
+            ><img src="/static/images/apple-img.png" class="apple-img"
+          /></a>
+        </div>
+
+        <div class="new-signup">
+          <p>
+            Already have an account?
+            <span><a href="{% url 'login' %}">Login here</a></span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

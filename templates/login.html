@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/css/login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/6802a7da62.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Login to your account</title>
+    <style>
+      .content h3 {
+        color: rgb(228, 74, 74);
+        text-align: center;
+        margin-bottom: -20px;
+      }
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: -10px;
+      }
+      input {
+        height: 40px;
+        font-size: 1.5rem;
+      }
+      .password {
+        margin-top: 120px;
+      }
+      @media screen and (max-width: 1400px) {
+        input {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="side-logo">
+        <img
+          src="/static/images/side-img.png"
+          alt="Fresh Save"
+          class="side-img"
+        />
+      </div>
+
+      <div class="content">
+        <h1 class="div">Welcome Back!</h1>
+        <p class="content-p">
+          Welcome to a community of that shares a <br />common belief about food
+          wastage
+        </p>
+        <h3>
+          {% if error %} {{ error }}
+          <br /><br />
+          {% endif %}
+        </h3>
+        <form method="post" action="{% url 'login' %}">
+          {% csrf_token %}
+          <input
+            type="text/number/email"
+            placeholder="Username"
+            class="username"
+            required
+            name="username"
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            class="password"
+            required
+            name="password"
+          />
+          <div class="forgot-password">
+            <span>Forgot password ?</span>
+          </div>
+
+          <div class="signin-button">
+            <button type="submit">Sign in</button>
+          </div>
+        </form>
+
+        <div class="signin-options">
+          <p>Or Sign in With</p>
+        </div>
+
+        <div class="links">
+          <a href="#"
+            ><img src="/static/images/google-img.png" class="google-img"
+          /></a>
+          <a href="#"
+            ><img src="/static/images/facebook-img.png" class="facebook-img"
+          /></a>
+          <a href="#"
+            ><img src="/static/images/apple-img.png" class="apple-img"
+          /></a>
+        </div>
+
+        <div class="new-signup">
+          <p>
+            Don't have an account?
+            <span><a href="{% url 'signup' %}">Sign up!</a></span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
