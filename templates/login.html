@@ -63,11 +63,7 @@
           Welcome to a community of that shares a <br />common belief about food
           wastage
         </p>
-        <h3>
-          {% if error %} {{ error }}
-          <br /><br />
-          {% endif %}
-        </h3>
+        <h3>{% if error %} {{ error }} {% endif %}</h3>
         <form method="post" action="{% url 'login' %}">
           {% csrf_token %}
           <input
