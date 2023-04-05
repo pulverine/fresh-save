@@ -12,4 +12,5 @@ Activate the virtualenv for the project.
 
 Install project dependencies:
 
-    $ pip install -r requirements/local.txt
+    $ pip install -r requirements.txt
+    
